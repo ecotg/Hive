@@ -1,0 +1,307 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	background: #4682B4;
+}
+
+#title {
+	align: center;
+	margin: 1em;
+}
+
+.error{
+	color: #E80000;
+	align: center;
+	margin: 2em;
+	text-indent: 400px;
+	display: none;
+}
+
+/* Section choicewrap, ie choose what task */
+.task {
+  background: #4682B4;
+  border: 1px solid white;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+  padding: 10px;
+  margin: 1em;
+  box-shadow: 0px 0px 8px #d9d9d9;
+  -moz-box-shadow: 0px 0px 8px #d9d9d9;
+  -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+  transform: translate(-50%, 90%);
+  top: 50%;
+  left: 30%;
+  width: 30%;
+  height: 15%;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  font-family: 'Droid Sans', Tahoma, Arial, Verdana sans-serif;
+}
+
+.task.active {
+	border: 2px solid #fff;
+  color: white;
+  border-radius: 50px;
+  padding: 15px 80px;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 #74a3b0;
+  background-color: #709CA8;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Section hiveWrap, ie enter nick/hive-name */
+#hiveWrap {
+	display: none;
+}
+
+/* Fix this */
+input::-webkit-input-placeholder {
+   align: center;
+   color: black;
+   margin: 1em;
+   text-transform: uppercase;
+   padding-left: 4px;
+}
+
+.hiveInput {
+  color: white;
+  background-color: #4682B4;
+  display: flex;
+  flex-direction: row;
+  outline:0;
+  margin: 0.8em;
+  top: 10px;
+  height: 40px;
+  width: 420px;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: white;
+  transform: translate(120%, 370%);
+  background-color: transparent;
+  font-size: 15px;
+  padding-left: 4px;
+  font-family: 'Droid Sans', Tahoma, Arial, Verdana sans-serif;
+}
+
+.hiveInput:focus {
+  border: 3px dashed red;
+}
+
+.hive-submit {
+    border: 1px solid white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 1px white;
+    padding: 16px 32px;
+    position: relative;
+    margin: 4px 2px;
+    top: 50px;
+    cursor: pointer;
+    transform: translate(600%, 260%);
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    background-color: #4682B4;
+    font-family: 'Droid Sans', Tahoma, Arial, Verdana sans-serif;
+    font-size: 12px;
+}
+
+/* section contentWrap */
+#contentWrap {
+	margin: auto;
+	width: auto;
+	display: none;
+}
+
+/* section contentWrap, editor */
+
+#editorWrap {
+	float: left;
+	width: 49%;
+	border: 1px #000 solid;
+	padding-top: 10px;
+	overflow: hidden;
+	height: 85%;
+}
+
+/* section contentWrap, chat */
+#chatWrap {
+	float: right;
+	width: 98%;
+	border: 1px #000 solid;
+	overflow: hidden;
+	height: 85%;
+}
+
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,900);
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+#contentWrap: * {
+  box-sizing: border-box;
+  margin: 0;
+  overflow: scroll;
+}
+
+p {
+  font-weight: 300;
+}
+
+.chat {
+  width: 300px;
+  background: #fff;
+  margin: 0 auto;
+  /*height: auto;*/
+  overflow: auto;
+}
+
+header {
+  background: #35323C;
+  height: 50px;
+  padding: 5px 10px;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  margin: 5px;
+  font-weight: 300;
+  font-size: 1.3em;
+  /* Retro feel */
+  color: #d7ceb2;
+  text-shadow: 3px 3px 0px #2c2e38, 5px 5px 0px #5c5f72;
+  font: 1.3em 'BazarMedium';
+  letter-spacing: 10px;
+}
+
+.messages {
+  box-sizing: border-box;
+  margin: none;
+  width: 100%;
+  height: 400px;
+  overflow: scroll;
+  border-right: 1px solid silver;
+  padding: 10px 10px 0px 10px;
+}
+
+.message {
+  float: left;
+  width: 100%;
+  margin: 8px 0;
+  border-bottom: 1px solid black;
+}
+
+.message p {
+  font-size: 0.8em;
+  width: 90%;
+  margin: 8px 0;
+}
+
+img {
+  border-radius: 100%;
+  float: left;
+  margin: 0 10px 15px 0;
+}
+
+p.time {
+  color: rgba(0,0,0,0.5);
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+h2:before {
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background: #39caad;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+footer {
+  box-sizing: border-box;
+  width: 100%;
+  background: #fff;
+  height: 80px;
+  border: 1px solid #4682B4;
+}
+
+#the_message {
+  position: bottom;
+  bottom: 10px;
+  border: 1px solid silver;
+  background-color: white;
+  color: black;
+  float: left;
+  width: 60%;
+  margin: .5em;
+  height: 55px;
+  text-align: left;
+  overflow: scroll;
+  font-size: 13.5px;
+}
+
+.send {
+  background-color: #4682B4;
+  appearance: none;
+  position: bottom;
+  padding: 2px;
+  float: right;
+  margin: .46em;
+  bottom: 10px;
+  height: 65px;
+  width: 30%;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+}
+
+.send-message {
+  margin: 0;
+  position: inline;
+}
+
+.whisper{
+	color: blue;
+	font-style: italic;
+}
+
+
+#roomtoken {
+	display: none;
+	/* use to push into the center */
+  	transform: translate(38%, 24%);
+}
+
+#roomtoken p {
+	margin: 0 0 0 3px;
+	font-align: center;
+	font-size: small;
+}
+
+#token {
+  font-size: x-small;
+  font-weight: bold;
+  font-align: center;
+}
+
+#token::selection {
+  	background: rgba(0, 160, 255, 0.4);
+}

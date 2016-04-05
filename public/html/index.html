@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title> Chat with socket.io and node js </title>
+		<link rel="stylesheet" type="text/css" media="screen" href="../public/css/index.css"></link>
+	</head>
+	<body class="container-fluid">
+		<p id="title" align="center"> Simple chat server </p>
+		<p class="Error"></p>
+		<section id="choiceWrap">
+			<input type="button" class="task" value="Join Hive"></input>
+			<input type="button" class="task" value="Create Hive"></input>
+		</section>
+		<section id="hiveWrap">
+			<form id="setNick">
+				<input size="30" class="hiveInput" id="nickname" placeholder="Enter a nickname"></input>
+				<input size="30" class="hiveInput" id="hivename" placeholder="Enter a hive-name or token"></input>
+				<input type="submit" class="hive-submit"></input>
+			</form>
+		</section>
+		<section id="contentWrap">
+			<div class="chat">
+				<header>
+					<h1>Chats</h1>
+				</header>
+				<section class="messages">
+				    <div class="message">
+				      <h2>Almighty Cage</h2>
+				      <p> I am Nicolas, don't you know? I'm fuckin' famous...</p>
+				      <p class="time" date-unix="0"><span class="entypo-clock"></span> 5 mins ago</p>
+				    </div>
+				    <div class="message">
+				      <h2>The Murray</h2>
+				      <p>Quiet there Cage! I'm even more famous than you...</p>
+				      <p class="time" date-unix="0"><span class="entypo-clock"></span> 3 mins ago</p>
+				    </div>
+				    <div class="message">
+				      <h2>Professor Ape</h2>
+				      <p>You two act like monkeys and shit...</p>
+				      <p class="time" date-unix="0"><span class="entypo-clock"></span> just now</p>
+				    </div>
+			 </section>
+       		 <footer>
+			  	<form id="send-message">
+             		<textarea id="the_message"></textarea>
+					<input type="submit" class="send"></input>
+          		</form>
+			  </footer>
+			</div>
+		</section>
+			<div id="roomToken">
+				<input typ="text" id="token" onmouseover="this.focus();" onfocus="this.select()" size="39" readonly="readonly" value=""></input>
+				<p id="tokenHelp">
+					Use token to invite others to the room
+				</p>
+		   </div>
+		<section>
+		</section>
+		<script src="../public/js/randCol.js" type="text/javascript"></script>
+		<script src="//code.jquery.com/jquery-1.12.0.min.js" type="text/javascript"></script>
+		<script src="/socket.io/socket.io.js" type="text/javascript"></script>
+		<script src="../public/js/js-cookie.js" type="text/javascript"></script>
+		<script src="../public/js/index.js" type="text/javascript"></script>
+	</body>
+</html>
