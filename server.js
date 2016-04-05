@@ -12,9 +12,9 @@ var db = require('./config/database');
 var db_url = process.env.MONGOLAB_URI || db.url;
 
 // db startup
-mongoose.connect(db.url, function(err){
+mongoose.connect(db_url, function(err){
 	if (err){
-		console.log('Error connecting to mongo with url: ' + db.url);
+		console.log('Error connecting to mongo with url: ' + db_url);
 		console.error(err);
 	} else {
 		console.log('connected to mongodb');
