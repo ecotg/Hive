@@ -6,14 +6,18 @@
   "private": "true",
   "main": "server.js",
   "dependencies": {
-    "crypto": "0.0.3",
     "express": "4.13.1",
     "morgan": "1.7.0",
     "socket.io": "1.4.5",
     "xpath": "0.0.22"
   },
+  "start": "node server.js",
   "devDependencies": {
     "gulp": "^3.9.1",
     "jasmine-node": "^1.14.5"
   },
+  "engines": {
+    "node": "0.10.35",
+    "npm": "3.8.1"
+  }
 }
