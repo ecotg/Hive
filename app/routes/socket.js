@@ -31,6 +31,7 @@ var hiveExists = function(data){
 
 // FIXME: remove this, re-use uniqueNick
 var usrExists = function(data){
+	console.log('querying for user: ' + data.nick)
 	var nick = trimThenLower(data.nick);
 	var hive = trimThenLower(data.hive);
 	var query = Chat.findOne({nick: nick, hive: hive}).lean();
@@ -39,6 +40,7 @@ var usrExists = function(data){
 
 var uniqueNick = function(data){
 	// call after ensuring hiveExists, need the hive name
+	console.log('querying for unique nick: ' + data.nick)
 	var nick = trimThenLower(data.nick);
 	var hive = trimThenLower(data.hive);
 	var query = Chat.findOne({nick: nick, hive: hive}).lean();
