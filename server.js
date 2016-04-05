@@ -9,6 +9,7 @@ require('./app/routes/hive')(app);
 
 // load db configs
 var db = require('./config/database');
+var db_url = process.env.MONGOLAB_URI || db.url;
 
 // db startup
 mongoose.connect(db.url, function(err){

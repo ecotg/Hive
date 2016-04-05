@@ -144,7 +144,7 @@ var createNewHive = function(socket, data){
 		}
 
 		if (recs === null){
-			console.log('Unique nick');
+			console.log(owner + ' has a unique nick');
 			socket.nickname = owner.toLowerCase();
 			socket.hive = roomName.toLowerCase();
 			// yay - hive can be created
