@@ -16,6 +16,7 @@ mongoose.connect(db_url, function(err){
 	if (err){
 		console.log('Error connecting to mongo with url: ' + db_url);
 		console.error(err);
+		return;
 	} else {
 		console.log('connected to mongodb');
 	}
